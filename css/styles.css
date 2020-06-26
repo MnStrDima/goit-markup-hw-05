@@ -67,6 +67,7 @@ body {
 }
 
 .site-navigation .link {
+  position: relative;
   padding-top: 32px;
   padding-bottom: 32px;
   display: block;
@@ -83,8 +84,16 @@ body {
   color: var(--button-background-links-color);
 }
 
-.site-navigation .current {
-  color: var(--button-background-links-color);
+.site-navigation .current::after {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
+  background-color: var(--button-background-links-color);
 }
 
 /*Контакты в хедере*/
@@ -290,6 +299,10 @@ body {
 }
 
 .section-subtitle.work {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   color: var(--body-background-button-font-color);
   background: rgba(47, 48, 58, 0.8);
   text-align: center;
@@ -351,6 +364,7 @@ body {
 }
 
 .section-list .work-item {
+  position: relative;
   width: 370px;
   text-align: start;
   display: block;
